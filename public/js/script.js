@@ -39,8 +39,8 @@ setInterval( async () => {
     
             
     if(jsonResponse.data.length){
-        temp.innerHTML = jsonResponse.data[jsonResponse.data.length -1].temperature;
-        humid.innerHTML = jsonResponse.data[jsonResponse.data.length -1].humidity;
+        temp.innerHTML = jsonResponse.data[jsonResponse.data.length -1].temperature + "°C";
+        humid.innerHTML = jsonResponse.data[jsonResponse.data.length -1].humidity + "% de Umidade";
 
         const reversedData = [...jsonResponse.data].reverse().slice(1);
 
