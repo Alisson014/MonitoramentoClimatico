@@ -1,0 +1,26 @@
+{
+  "name": "monitoramentoclimatico",
+  "version": "1.0.0",
+  "description": "Uma aplicação web em node para simular monitoramento climático por meio de uma integração com o wokwi. Esse projeto foi proposto como uma atividade avaliativa para a disciplina de web3 do curso de informática para internet que realizo.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Alisson014/MonitoramentoClimatico.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Alisson014/MonitoramentoClimatico/issues"
+  },
+  "homepage": "https://github.com/Alisson014/MonitoramentoClimatico#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.2",
+    "express": "^5.1.0",
+    "path": "^0.12.7"
+  }
+}
