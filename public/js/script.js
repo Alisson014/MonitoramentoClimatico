@@ -25,3 +25,28 @@ setInterval(() => {
         index = 0;
     }
 }, 5000);
+
+
+setInterval( async () => {
+    const response = await fetch("https://monitoramento-climatico-henna.vercel.app/clima/get");
+    const jsonResponse = await response.json();
+
+    const temp = document.getElementById('temp');
+    const temps = ['temp1', 'temp2', 'temp3', 'temp4'].map(id => document.getElementById(id));
+    
+    const humid = document.getElementById('humid');
+    const humids = ['humid1', 'humid2', 'humid3', 'humid4'].map(id => document.getElementById(id));
+    
+            
+    if(jsonResponse.data.length){
+        temp.innerHTML = jsonResponse.data[jsonResponse.data.length -1].temperature;
+        humid.innerHTML = jsonResponse.data[jsonResponse.data.length -1].humidity;
+
+        const reversedData = [...jsonResponse.data].reverse().slice(1);
+
+        reversedData.forEach((element, index) => {
+            temps[index].innerHTML = element.temperature;
+            humids[index].innerHTML = element.humidity;
+        });
+    }
+}, 5000);
