@@ -45,8 +45,8 @@ setInterval( async () => {
         const reversedData = [...jsonResponse.data].reverse().slice(1);
 
         reversedData.forEach((element, index) => {
-            temps[index].innerHTML = element.temperature;
-            humids[index].innerHTML = element.humidity;
+            temps[index].innerHTML = element.temperature + "°C";
+            humids[index].innerHTML = element.humidity +"% de Umidade";
         });
     }
 }, 5000);
